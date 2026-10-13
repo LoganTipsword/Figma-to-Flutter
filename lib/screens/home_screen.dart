@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../widgets/widgets.dart';	// Barrel file import
+import 'package:flutter_svg/flutter_svg.dart';
+import '../widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -16,19 +17,19 @@ class HomeScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: const AppHeader(
-        title: 'SpookyFind',
+        title: 'Spooky Find',
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            const SizedBox(height: 24),
+            const SizedBox(height: 40),
             ScareLevelDropdown(
               selectedValue: selectedLevel,
               items: _scareLevels,
             ),
-            const SizedBox(height: 24),
+            const SizedBox(height: 40),
             const MapPlaceholder(),
             const SizedBox(height: 24),
             // 3. Camera & Gallery Action Row (Lesson A Placeholders)
@@ -37,11 +38,15 @@ class HomeScreen extends StatelessWidget {
               children: [
                 IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.camera_alt_outlined),
+                  icon: SvgPicture.asset(
+                    'assets/icons/home/camera_icon.svg',
+                  ),
                 ),
                 IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.photo_library),
+                  icon: SvgPicture.asset(
+                    'assets/icons/home/gallery_icon.svg',
+                  ),
                 ),
               ],
             ),
