@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class AppHeader extends StatelessWidget implements PreferredSizeWidget {
   final String title;
@@ -13,7 +14,12 @@ class AppHeader extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: Row(
         children: [
-          Icon(Icons.hourglass_bottom_outlined), // This is a placeholder icon until we get our icons from Figma
+          // VERIFY HEADER ICON RENDERING
+          SvgPicture.asset(
+            'assets/icons/home/zombie_icon.svg',
+            width: 48,
+            height: 48,
+          ),
           const SizedBox(width: 8),
           Text(title),
         ],
