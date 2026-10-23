@@ -35,6 +35,9 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   flutter_svg: ^2.3.0
+  google_fonts: ^8.2.1
+  flutter_map: ^8.3.2
+  latlong2: ^0.10.1
 
 dev_dependencies:
   flutter_test:
@@ -52,16 +55,16 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-    uses-material-design: true #This line should already be in your yaml file
+  uses-material-design: true #This line should already be in your yaml file
 
-    assets:
+  assets:
     # The lines below need to match your pathnames
-      - assets/icons/
-      - assets/images/
-      - assets/icons/home/
-      - assets/icons/camera/
-      - assets/icons/gallery/
-      - assets/icons/photo_detail/
+    - assets/icons/
+    - assets/images/
+    - assets/icons/home/
+    - assets/icons/camera/
+    - assets/icons/gallery/
+    - assets/icons/photo_detail/
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
