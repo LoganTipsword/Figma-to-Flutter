@@ -1,0 +1,32 @@
+[
+  {
+    "id": "sample-pumpkin-patch",
+    "name": "Sample Pumpkin Patch",
+    "type": "pumpkinPatch",
+    "scareLevel": 1,
+    "latitude": 39.7480,
+    "longitude": -104.9990,
+    "address": "Sample data: replaced by the class database",
+    "description": "Practice haunt so your code runs before the real data arrives."
+  },
+  {
+    "id": "sample-corn-maze",
+    "name": "Sample Corn Maze",
+    "type": "cornMaze",
+    "scareLevel": 2,
+    "latitude": 39.7300,
+    "longitude": -105.0050,
+    "address": "Sample data: replaced by the class database",
+    "description": "Practice haunt so your code runs before the real data arrives."
+  },
+  {
+    "id": "sample-haunted-house",
+    "name": "Sample Haunted House",
+    "type": "hauntedHouse",
+    "scareLevel": 3,
+    "latitude": 39.7400,
+    "longitude": -104.9750,
+    "address": "Sample data: replaced by the class database",
+    "description": "Practice haunt so your code runs before the real data arrives."
+  }
+]
