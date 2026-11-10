@@ -1,0 +1,142 @@
+[
+  {
+    "id": "scr3am-and-sugar-coffee-co",
+    "name": "Scr3am & Sugar Coffee Co.",
+    "type": "hauntedHouse",
+    "scareLevel": 2,
+    "latitude": 39.6807622,
+    "longitude": -104.9884932,
+    "address": "1974 S Acoma St, Denver, CO 80223",
+    "description": "Cat cafe."
+  },
+  {
+    "id": "zombie-crawl",
+    "name": "Zombie Crawl",
+    "type": "hauntedHouse",
+    "scareLevel": 3,
+    "latitude": 39.7540756,
+    "longitude": -104.9933098,
+    "address": "1600 Arapahoe St, Denver, CO 80202",
+    "description": "Downtown mall strip exploration."
+  },
+  {
+    "id": "spirit-halloween",
+    "name": "Spirit Halloween",
+    "type": "hauntedHouse",
+    "scareLevel": 2,
+    "latitude": 39.585463,
+    "longitude": -105.062194,
+    "address": "7301 S Santa Fe Dr, Littleton, CO 80120",
+    "description": "Spooky scary Halloween store for costumes, props, decorations, etc."
+  },
+  {
+    "id": "chatfield-farms-corn-maze",
+    "name": "Chatfield Farms Corn Maze",
+    "type": "cornMaze",
+    "scareLevel": 1,
+    "latitude": 39.5524347,
+    "longitude": -105.0988535,
+    "address": "8500 W Deer Creek Canyon Rd, Littleton, CO 80128",
+    "description": "Corn maze with food stalls and other small attractions."
+  },
+  {
+    "id": "hudson-gardens",
+    "name": "Hudson Gardens",
+    "type": "pumpkinPatch",
+    "scareLevel": 1,
+    "latitude": 39.6047036,
+    "longitude": -105.0226,
+    "address": "6115 S Santa Fe Dr, Littleton, CO 80120",
+    "description": "A botanical garden that does a spooky pumpkin patch."
+  },
+  {
+    "id": "the-melting-pot",
+    "name": "The Melting Pot",
+    "type": "hauntedHouse",
+    "scareLevel": 1,
+    "latitude": 39.61374,
+    "longitude": -105.02037,
+    "address": "2707 Main St, Littleton, CO 80120",
+    "description": "A haunted place where you can get good food."
+  },
+  {
+    "id": "13th-floor-haunted-house",
+    "name": "13th Floor Haunted House",
+    "type": "hauntedHouse",
+    "scareLevel": 1,
+    "latitude": 39.790542,
+    "longitude": -104.947071,
+    "address": "3400 E 52nd Ave, Denver, CO 80216",
+    "description": "“Scary” haunted house event."
+  },
+  {
+    "id": "the-seance-parlor",
+    "name": "The Seance Parlor",
+    "type": "hauntedHouse",
+    "scareLevel": 2,
+    "latitude": 39.758234,
+    "longitude": -105.011251,
+    "address": "2563 15th St Ste 217, Denver, CO 80211",
+    "description": "Haunted house with a live medium."
+  },
+  {
+    "id": "zak-bagans-the-haunted-museum",
+    "name": "Zak Bagans' The Haunted Museum",
+    "type": "hauntedHouse",
+    "scareLevel": 3,
+    "latitude": 36.1583879,
+    "longitude": -115.145794,
+    "address": "600 E Charleston Blvd, Las Vegas, NV 89104",
+    "description": "Haunted museum."
+  },
+  {
+    "id": "the-stanley-hotel",
+    "name": "The Stanley Hotel",
+    "type": "hauntedHouse",
+    "scareLevel": 3,
+    "latitude": 40.3828836,
+    "longitude": -105.5192192,
+    "address": "333 E Wonderview Ave, Estes Park, CO 80517",
+    "description": "Haunted hotel, inspiration for The Shining."
+  },
+  {
+    "id": "fright-fest-at-elitch-gardens",
+    "name": "Fright Fest at Elitch Gardens",
+    "type": "hauntedHouse",
+    "scareLevel": 3,
+    "latitude": 39.750187,
+    "longitude": -105.01016,
+    "address": "2000 Elitch Cir, Denver, CO 80204",
+    "description": "Amusement park with scare actors at night."
+  },
+  {
+    "id": "herzog-house",
+    "name": "Herzog House",
+    "type": "hauntedHouse",
+    "scareLevel": 2,
+    "latitude": 39.517196,
+    "longitude": -104.76172,
+    "address": "10970 S Pikes Peak Dr, Parker, CO",
+    "description": "Haunted house in Parker."
+  },
+  {
+    "id": "haunted-heritage",
+    "name": "Haunted Heritage",
+    "type": "hauntedHouse",
+    "scareLevel": 2,
+    "latitude": 38.2635833,
+    "longitude": -104.6169722,
+    "address": "201 W B St, Pueblo, CO 81003",
+    "description": "Ghost tour."
+  },
+  {
+    "id": "the-frightmare-compound",
+    "name": "The Frightmare Compound",
+    "type": "hauntedHouse",
+    "scareLevel": 3,
+    "latitude": 39.906888,
+    "longitude": -105.033108,
+    "address": "10798 Yukon St, Westminster, CO 80021",
+    "description": "A haunted house, escape rooms, and maybe the best tourist trap for Halloween."
+  }
+]
