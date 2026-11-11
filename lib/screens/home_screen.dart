@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../widgets/widgets.dart';
 import '../view_models/attractions_view_model.dart';
+import '../view_models/location_view_model.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -19,17 +20,20 @@ class _HomeScreenState extends State<HomeScreen> {
  // In order from mildest to scariest: the first item is scare level 1
 // Created once, when the screen first appears, and kept between rebuilds
   final AttractionsViewModel _viewModel = AttractionsViewModel();
+  final LocationViewModel _locationViewModel = LocationViewModel();
 
   @override
   void initState() {
     super.initState();
     // No await: the screen draws right away, and the pins appear when the haunts arrive
     _viewModel.loadAttractions();
+    _locationViewModel.findUser(); // Runs at the same time as loading the haunts
   }
 
   @override
   void dispose() {
     _viewModel.dispose(); // The screen is gone, so stop listening for changes
+    _locationViewModel.dispose();
     super.dispose();
   }
 
@@ -44,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       // Rebuilds everything inside whenever the ViewModel calls notifyListeners()
       body: ListenableBuilder(
-        listenable: _viewModel,
+        listenable: Listenable.merge([_viewModel, _locationViewModel]),
         builder: (context, child) {
           final visible = _viewModel.visibleAttractions;
 
@@ -75,8 +79,18 @@ class _HomeScreenState extends State<HomeScreen> {
                     'Showing ${visible.length} of ${_viewModel.attractions.length} haunts',
                     style: textTheme.bodyMedium,
                   ),
+                   if (_locationViewModel.isLocating)
+                  Text('Finding your location…', style: textTheme.bodySmall)
+                else if (_locationViewModel.problem != null)
+                  Text(
+                    'Showing home base: ${_locationViewModel.problem}',
+                    style: textTheme.bodySmall,
+                  ),
                 const SizedBox(height: 16),
-                SpookyMap(attractions: visible),
+                SpookyMap(
+                  attractions: visible,
+                  userLocation: _locationViewModel.userLocation,
+                ),
                 const SizedBox(height: 24),
                 // 3. Camera & Gallery Action Row (Lesson A Placeholders)
                 Row(

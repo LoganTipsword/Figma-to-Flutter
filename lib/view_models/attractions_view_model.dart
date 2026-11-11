@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import '../data/attraction_repository.dart';
 import '../models/attraction.dart';
 
+
 // Holds what the screen needs to show, and tells the screen when it changes.
 class AttractionsViewModel extends ChangeNotifier {
   final AttractionRepository _repository = AttractionRepository();
