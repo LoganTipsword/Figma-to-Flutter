@@ -8,12 +8,15 @@ class SpookyMap extends StatelessWidget {
     super.key,
     this.attractions = const [],
     this.userLocation,
+    this.onAttractionTapped,
   });
 
   // The haunts to pin on the map. The home screen passes these in.
   final List<Attraction> attractions;
   // Where the user is, or null if we don't know (yet, or at all)
   final LatLng? userLocation;
+  // Called with the haunt whose pin was tapped. The home screen decides what happens.
+  final ValueChanged<Attraction>? onAttractionTapped;
 
   // Home base: where the map starts. Replace with your school's coordinates.
   static const LatLng homeBase = LatLng(39.608858, -105.019089);
@@ -72,18 +75,24 @@ class SpookyMap extends StatelessWidget {
                   point: attraction.location,
                   width: 40,
                   height: 40,
-                  child: Tooltip(
-                    message: attraction.name, // Shown on hover or long-press, and read by screen readers
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: colorScheme.primary,
-                        shape: BoxShape.circle,
-                        border: Border.all(width: 2, color: colorScheme.surface),
-                      ),
-                      child: Icon(
-                        _iconFor(attraction.type),
-                        color: colorScheme.onPrimary,
-                        size: 22,
+                  child: GestureDetector(
+                    onTap: () => onAttractionTapped?.call(attraction),
+                    child: MouseRegion(
+                      cursor: SystemMouseCursors.click,
+                      child: Tooltip(
+                        message: attraction.name, // Shown on hover or long-press, and read by screen readers
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: colorScheme.primary,
+                            shape: BoxShape.circle,
+                            border: Border.all(width: 2, color: colorScheme.surface),
+                          ),
+                          child: Icon(
+                            _iconFor(attraction.type),
+                            color: colorScheme.onPrimary,
+                            size: 22,
+                          ),
+                        ),
                       ),
                     ),
                   ),
