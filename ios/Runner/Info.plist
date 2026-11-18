@@ -6,6 +6,10 @@
     <string>Spooky Find shows where you are on the map, so you can find haunts near you.</string>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+    <string>Spooky Find uses the camera so you can take photos of the haunts you visit.</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Spooky Find only takes photos and never records sound.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
