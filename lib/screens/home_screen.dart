@@ -6,6 +6,7 @@ import '../view_models/location_view_model.dart';
 import '../models/attraction.dart';
 import '../view_models/photos_view_model.dart';
 import 'camera_screen.dart';
+import 'gallery_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -57,6 +58,14 @@ class _HomeScreenState extends State<HomeScreen> {
     Navigator.of(context).push(
       MaterialPageRoute(
         builder: (context) => CameraScreen(photosViewModel: _photosViewModel),
+      ),
+    );
+  }
+
+  void _openGallery() {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => GalleryScreen(photosViewModel: _photosViewModel),
       ),
     );
   }
@@ -133,7 +142,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                     IconButton(
-                      onPressed: () {},
+                      onPressed: _openGallery,
+                      tooltip: 'Photo gallery',
                       icon: SvgPicture.asset(
                         'assets/icons/home/gallery_icon.svg',
                       colorFilter: ColorFilter.mode(

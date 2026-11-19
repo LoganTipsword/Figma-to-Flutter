@@ -46,4 +46,11 @@ class PhotoRepository {
     await box.put(now.millisecondsSinceEpoch.toString(), bytes);
     return Photo(takenAt: now, bytes: bytes);
   }
+
+     // Deletes one photo for good
+  Future<void> deletePhoto(Photo photo) async {
+    final Box<Uint8List> box = await _openBox();
+    // The same key savePhoto used: the time it was taken, in milliseconds
+    await box.delete(photo.takenAt.millisecondsSinceEpoch.toString());
+  }
 }
